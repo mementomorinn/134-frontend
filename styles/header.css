@@ -1,0 +1,40 @@
+.header {
+  min-height: 200px;
+  background: #181818;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 20px 0 40px 0;
+  margin-bottom: 50px;
+}
+.h1 {
+  font-weight: bold;
+  color: #d3d3d3;
+}
+.orange {
+  padding: 0 15px;
+  background: #e69239;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+  color: #272727;
+}
+.black {
+  font-weight: bold;
+}
+.footer {
+  min-height: 100px;
+  background: #181818;
+  display: flex;
+  align-items: center;
+}
+.footer .icons {
+  display: flex;
+  justify-content: center;
+}
+.footer img {
+  width: 40px;
+
+  margin-right: 10px;
+}

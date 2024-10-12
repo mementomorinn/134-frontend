@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-block: #f1e7dc;
+  --color-block-text: rgb(61, 60, 57);
+  --color-block-active: #c5bbad;
+}
+body {
+  background: #dacfc3;
+}
+a {
+  text-decoration: none;
+}
+.info {
+  margin-bottom: 70px;
+}
+.text {
+  text-align: justify;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.final_sites {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.final_sites_img {
+  color: rgb(145, 145, 145);
+}
+.final_sites img {
+  max-width: 600px;
+  width: 100%;
+}
+.training_plan {
+  margin-bottom: 50px;
+}
+.block_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .block_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 770px) {
+  .block_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .final_sites {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 400px) {
+  .block_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.block {
+  background: var(--color-block);
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--color-block-text);
+  max-width: 320px;
+  min-height: 170px;
+  width: 100%;
+  transition: 0.2s;
+  margin-bottom: 30px;
+}
+.block:hover {
+  transform: translateY(-15px);
+  box-shadow: 0px 10px 15px rgba(70, 67, 65, 0.7);
+  transition: 0.2s;
+  cursor: pointer;
+  background: var(--color-block-active);
+}
+.block:active {
+  background: var(--color-block-active);
+  transition: 0.2s;
+}
+.block_title {
+  border-bottom: 2px solid var(--color-block-text);
+  margin-bottom: 10px;
+}
+.block_about {
+  text-align: justify;
+}
