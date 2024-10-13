@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 :root {
-  --color-block: #f1e7dc;
+  --color-block: #f1dce1;
   --color-block-text: rgb(61, 60, 57);
-  --color-block-active: #c5bbad;
+  --color-block-active: #c5adbb;
 }
 body {
-  background: #dacfc3;
+  background: #cab4bb;
 }
 a {
   text-decoration: none;
