@@ -1,3 +1,7 @@
+body {
+  background: #cab4bb;
+}
+
 .header {
   min-height: 200px;
   background: #181818;
@@ -24,6 +28,8 @@
   font-weight: bold;
 }
 .footer {
+  position: relative;
+  bottom: 0;
   min-height: 100px;
   background: #181818;
   display: flex;
@@ -35,6 +41,5 @@
 }
 .footer img {
   width: 40px;
-
   margin-right: 10px;
 }
