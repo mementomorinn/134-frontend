@@ -14,44 +14,169 @@
     <link rel="stylesheet" href="styles/header.css" />
   </head>
   <body>
+    <!-- header -->
     <div class="header">
       <h1 class="h1">ВЕРСТКА САЙТОВ</h1>
       <div class="orange"><h1 class="black">С НУЛЯ</h1></div>
     </div>
-    <div class="container">
-      <a class="home" href="index.html">
-        <button class="home_btn btn btn-danger">на главную</button></a
-      >
-      <div class="text_grid">
-        <div class="text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          aut repudiandae hic eos reiciendis doloribus cumque cupiditate quis
-          sunt, temporibus nisi neque odio omnis necessitatibus dicta dolore
-          corporis, perferendis nesciunt?
-        </div>
-        <!-- <div class="img"><img src="" alt="" /></div> -->
-      </div>
-      <div class="text_grid">
-        <!-- <div class="img"><img src="" alt="" /></div> -->
-        <div class="text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          aut repudiandae hic eos reiciendis doloribus cumque cupiditate quis
-          sunt, temporibus nisi neque odio omnis necessitatibus dicta dolore
-          corporis, perferendis nesciunt?
-        </div>
-      </div>
-      <div class="code_container">
-        <code class="code">
-          function checkParent (src, dest) {<br />
-          while (src != null) {<br />
-          if (src.tagName == dest) return src<br />
-          src = src.parentElement<br />
-          }<br />
-          return null<br />
-          }</code
+    <!-- content -->
+    <section class="content">
+      <div class="container">
+        <a href="index.html">
+          <button class="home_btn btn btn-danger mb-4">на главную</button></a
         >
+        <h3 class="mb-5"><strong>Подготовка к в верстке</strong></h3>
+        <h4 class="mb-4"><strong>Выбор редактора кода</strong></h4>
+        <div class="text">
+          Первым шагом в создании нашего сайта является выбор и настройка
+          редактора кода. На данный момент их существует огромное множество и
+          каждый имеет свои особенности и преимущества. Вот некоторые из самых
+          популярных:
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <strong>1. Visual Studio Code (VS Code)</strong><br />
+            Многофункциональный редактор от Microsoft, поддерживающий расширения
+            для различных языков и фреймворков. Имеет встроенную поддержку Git,
+            терминал и отладку.
+          </li>
+          <li>
+            <strong>2. Sublime Text</strong><br />
+            Легкий и быстрый редактор с элегантным интерфейсом. Поддерживает
+            плагины, но некоторые функции могут требовать дополнительной
+            настройки.
+          </li>
+          <li>
+            <strong>2. Atom</strong><br />
+            Редактор от GitHub, который можно легко настраивать и расширять. Он
+            поддерживает плагины и интеграцию с Git.
+          </li>
+          <li class="mb-5">
+            <strong>2. WebStorm</strong><br />
+            Коммерческий редактор от JetBrains, специально разработанный для
+            JavaScript и веб-разработки. Обладает мощными инструментами для
+            работы с фреймворками и целостной интеграцией.
+          </li>
+        </ul>
+        <div class="text">
+          В данном курсе не будет сильного углубления в программирование,
+          поэтому нам подойдет практически любой из существующих редакторов
+          кода. Более того, наш код можно писать даже в обычном блокноте или
+          любом другом текстовом редакторе!
+        </div>
+        <div class="text mb-5">
+          Но все же я рекомендую вам начать работу в Visual Studio Code, так как
+          он предлагает богатую экосистему расширений и активное сообщество, что
+          делает его хорошим инструментом для начинающих веб-разработчиков.
+          Скачать его можно по данной
+          <a
+            href="https://code.visualstudio.com/"
+            target="_blank"
+            class="link-danger link-underline-opacity-0 link-underline-opacity-75-hover"
+            >ссылке</a
+          >.
+        </div>
+        <h4 class="mb-4"><strong>Установка плагинов</strong></h4>
+        <div class="text">
+          Итак, после успешной установки Visual Studio Code открываем его и
+          заходим во вкладку Extensions (магазин расширений). С помощью поиска
+          находим и устанавливаем следующие расширения:
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <strong>1. Auto Rename Tag</strong><br />
+            При редактировании открывающего тега автоматически меняет и
+            закрывающий. То же самое, с точностью до наоборот, происходит и в
+            том случае, если меняют закрывающий тег.
+          </li>
+          <li>
+            <strong>2. Live Server</strong><br />
+            Позволит запускать код в браузере и обновлять изменения после
+            нажатия комбинации клавиш ctrl+S.
+          </li>
+          <li>
+            <strong>3. VS HTML to CSS</strong><br />
+            Позволит скопировать из выделенного фрагмента HTML разметки только
+            классы (alt + X) и вставить их в CSS.
+          </li>
+          <li>
+            <strong>4. Dracula Official</strong> <br />
+            Просто красивая тема, не обязательна к установке. Тема меняется в
+            настройках (File -> Preferences -> Color Theme).
+          </li>
+          <li class="mb-5">
+            <strong>5. Material Icon Theme</strong> <br />
+            Также не обязательна к установке. Добвляет различные иконки для
+            файлов и каталогов проекта.
+          </li>
+        </ul>
+        <h4 class="mb-4"><strong>Файлы проекта</strong></h4>
+        <div class="text">
+          Для верстки сайтов необходимо создать структуру файлов и каталогов,
+          которая обеспечит удобное управление проектом. Основные файлы и
+          каталоги должны включать:
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <strong>1. index.html</strong><br />
+            Главный HTML-файл, который загружается первым. Он содержит основную
+            разметку сайта.
+          </li>
+          <li>
+            <strong>2. css/</strong><br />
+            Каталог для хранения файлов стилей. Внутри этого каталога обычно
+            создается файл <strong> styles.css </strong>
+            , где находятся все CSS-правила.
+          </li>
+          <li>
+            <strong>3. images/</strong><br />
+            Каталог для хранения изображений и графики, используемых на сайте.
+          </li>
+          <li class="mb-4">
+            <strong>4. fonts/</strong> <br />
+            Каталог для шрифтов, если используются пользовательские шрифты.
+          </li>
+        </ul>
+        <div class="text">Пример структуры каталога:</div>
+        <div class="code_container mb-5">
+          <code class="code">
+            my-first-project <br />
+            ├──index.html<br />
+            ├──css/<br />│ └── styles.css<br />├── images/ <br />└── fonts/
+          </code>
+        </div>
+        <div class="text">
+          В более сложных проектах можно встретить и другие файлы, например,
+          <strong> README.md </strong>
+          (файл с информацией о проекте, его структуре и особенностях),
+          <strong> js </strong> (каталог для JavaScript-файлов, которые содержат
+          функциональность сайта) и <strong> assets </strong>
+          (дополнительный каталог для хранения медиафайлов, иконок и других
+          ресурсов).
+        </div>
+        <div class="text">
+          Создание такой структуры поможет организовать код и упростит процесс
+          разработки и поддержки сайта.
+        </div>
       </div>
-    </div>
+    </section>
+    <!-- code -->
+    <!-- <section class="code_section">
+      <div class="container">
+        <div class="code_container">
+          <code class="code">
+            function checkParent (src, dest) {<br />
+            while (src != null) {<br />
+            if (src.tagName == dest) return src<br />
+            src = src.parentElement<br />
+            }<br />
+            return null<br />
+            }</code
+          >
+        </div>
+      </div>
+    </section> -->
+    <!-- footer -->
     <div class="footer">
       <div class="container">
         <div class="icons">

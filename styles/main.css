@@ -6,9 +6,9 @@
 :root {
   --color-block: #f1dce1;
   --color-block-text: rgb(61, 60, 57);
-  --color-block-active: #c5adbb;
+  --color-block-active: #b6a0ad;
 }
-a {
+.block_grid > a {
   text-decoration: none;
 }
 .info {
@@ -68,6 +68,7 @@ a {
   color: var(--color-block-text);
   max-width: 320px;
   min-height: 170px;
+  height: 100%;
   width: 100%;
   transition: 0.2s;
   margin-bottom: 30px;
@@ -86,7 +87,12 @@ a {
 .block_title {
   border-bottom: 2px solid var(--color-block-text);
   margin-bottom: 10px;
+  font-weight: bold;
 }
 .block_about {
   text-align: justify;
+}
+.p_bold {
+  font-weight: bold;
+  font-size: 23px;
 }
