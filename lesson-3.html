@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/lesson.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header mb-5">
+      <h1 class="h1">СОЗДАНИЕ САЙТОВ</h1>
+      <div class="orange"><h1 class="black">на HTML и CSS</h1></div>
+    </div>
+    <!-- content -->
+    <div class="container">
+      <h3 class="mb-4"><strong>Урок 3. Хедер (header)</strong></h3>
+      <div class="links mb-5">
+        <a href="#st1">1. Подключение шрифтов</a><br /><br />
+        <a href="#st2">2. Container</a><br /><br />
+        <a href="#st3">3. Создание хедера</a><br /><br />
+        <a href="#st4">4. Стили</a>
+      </div>
+      <h4 class="mb-4" id="st1"><strong>Подключение шрифтов</strong></h4>
+      <div class="text">
+        Чтобы подключить шрифты к сайту, вы можете сделать следующие действия:
+      </div>
+      <ul class="list-unstyled mb-4">
+        <li>
+          1. Перейдите на <a href="https://fonts.google.com/" class="link-danger link-underline-opacity-0 link-underline-opacity-75-hover">Google Fonts</a>
+          Определяет, как элементы будут выглядеть (цвета, шрифты, размеры и
+          пр.).
+        </li>
+        <li>
+          2. Найдите нужный вам шрифт (в данном случае Poppins) и нажмите на него.
+        </li>
+        <li>
+          3. Скопируйте ссылку для импорта.<br />
+          <div class="code">
+            <pre>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"></pre></div>
+        </li>
+        <li>
+          4. Вставьте эту ссылку в тег &lt;head> HTML-документа:<br />
+          <div class="code"><pre></pre></div>
+        </li>
+        <li>5. Используйте шрифт в CSS:</li>
+        <div class="code"><pre></pre></div>
+      </ul>
+      <div class="text mb-4">Теперь шрифт будет применен к вашему сайту.</div>
+      <h4 class="mb-4" id="st2">
+        <strong>Container</strong>
+      </h4>
+      <div class="text">
+        Перед началом создания хедера в теге &lt;body> создадим div с классом container, который обычно используется для обертки контента и установки ограничений по ширине, чтобы содержимое не растягивалось на весь экран.
+      </div>
+      <div class="code mb-4"><pre>&lt;div class="container">&lt;/div></pre></div> 
+      <div class="text">И пропишем для него СSS правила, ограничивающие его ширину и отвечающие за центрирование</div> 
+      <div class="code mb-4">
+        <pre></pre>
+      </div>
+      <h4 class="mb-4" id="st3"><strong>Создание хедера</strong></h4>
+      <div class="text mb-4">Теперь же приступаем к созданию самого хедера, для этого создаем:</div>
+      <ul class="list-unstyled mb-5">
+        <li>
+          1. Секцию с классом "header", в которой будет располагаться хедер<br />
+         <div class="code"><pre></pre></div>
+        </li>
+        <li>
+          2. Заголовок первого уровня &lt;h1> с текстом "GREENMIND", который служит логотипом сайта. Класс "logo" будет использоваться для стилизации. <br />
+          <div class="code"><pre></pre></div>
+        </li>
+        <li>
+          3. Навигационную панель<br />
+          <div class="code"><pre></pre></div>
+          <div class="text">В этом теге пропишем еще два тега div с классами "navbar_text" (содержит текстовые ссылки или разделы навигации. Здесь представлены три раздела: "главная", "продукты", "контакты" для создания которых используем заголовки&lt;h3>) и "navbar_img" (содержит изображения в тегах &ltimg>, которые часто используются для иконок в навигации)</div>
+          <div class="code"><pre></pre></div>
+        </li>
+      </ul>
+      <div class="text">В итое получаем такой HTML код:
+      </div>
+      <div class="code mb-4"><pre></pre></div>
+      <div class="image">
+        <img src="img/header.png" class="img-fluid" alt="result">
+        <p>результат работы кода</p>
+      </div>
+      <div class="text">К сожалению, данный код выводит элементы не в том виде, в котором они расположены на макете. Чтобы это исправить, необходимо прописать несколько CSS правил.</div>
+      <h4 class="mb-4" id="st4"><strong>Стили</strong></h4>
+      <div class="text">Начнем с создания базовых сбросов отступов и размерности элементов:</div>
+      <div class="code mb-4"><pre>
+* { 
+  padding: 0; 	
+  margin: 0; 	
+  box-sizing: border-box; 
+}</pre></div>
+        <div class="text">Правила, прописанные после селектора "*", применяются ко всем элементам на странице; "padding" и "margin" отвечают за внешние и внутренние отступы(в данном случае равны нулю, убирая все отступы), а "box-sizing: border-box" устанавливает, что ширина и высота элемента будут включать также внутренние отступы и границы.</div>
+        <div class="text">Теперь создадим переменные для основных цветов макета:</div>
+<div class="code mb-4">
+  <pre>
+:root { 	
+  --color-black: #1E1E1E; 	
+  --color-green: #C1DCDC; 
+}</pre>
+    </div>
+    <div class="text">Псевдокласс ":root" представляет корневой элемент документа. Здесь мы объявляем CSS переменные, отвечающие за цвета. </div>
+        <div class="text">Далее приступим к стилизации самого хедера. Выделяем весь HTML код, нажимаем (alt + X), переходим в css/styles.css и с помощью комбинации клавишь (ctrl + V) вставляем все прописанные ранее классы. </div>
+
+      <ul class="list-unstyled mb-5">
+        <li><strong>1. Стилизация секции header</strong>
+          <br />
+         <div class="code mb-3"><pre>
+.header { 	
+  height: 112px; 	
+  display: flex; 	
+  justify-content: 
+  space-between; 
+}</pre></div>
+      <div class="text">"height" yстанавливает высоту заголовка, "display: flex" применяет flexbox для выравнивания элементов (подробнее это свойство будет разобрано в отдельном <a href="display" class="link-danger link-underline-opacity-0 link-underline-opacity-75-hover">уроке</a>).</div>
+        </li>
+        <li>
+          <strong>2. Стиль для логотипа</strong><br />
+          <div class="code mb-4"><pre>
+.logo { 	
+  font-size: 24px; 	
+  font-weight: 400; 	
+  line-height: 36px; 	
+  text-align: left; 	
+  color: var(--color-black); 	
+  margin-right: 102px; 	
+  margin-top: 44px; 
+} </pre></div>
+<div class="text">Значения для таких свойств, как "font-size", "font-weight" "line-height" и  "text-align" можно посмотреть в макете при переходе в режим разработчика, выделив нужный элемент и просмотрев его код. <br>"color" задает цвет текста (в данном случае нужный нам цвет уже определен и содержится в переменной --color-black), "margin-right" и "margin-top" создают внешние отступы справа и сверху (их значение можно найти на макете, выделив нужный нам элемент и зажав alt)</div>
+        </li>
+        <li> <strong>3. Стилизация навигационной панели </strong><br />
+          <div class="code mb-4"><pre>
+.navbar { 	
+  width: 100%; 	
+  display: flex; 	
+  justify-content: space-between; 
+}</pre></div>
+          <div class="text">Опять же используем <a href="display" class="link-danger link-underline-opacity-0 link-underline-opacity-75-hover">flexbox</a> для выравнивания содержащихся в навигационной панеле "navbar_text" и "navbar_img"; " width: 100%" позволяет элементу занимать всю доступную ему зону.
+          </div>
+        </li>
+        <li> <strong>4. Установим стиль для текста навигации</strong><br />
+          <div class="code mb-4"><pre>
+.navbar_text { 	
+  display: flex; 	
+  margin-top: 48px; 
+} 
+.navbar_text > h3 { 	
+  font-size: 18px; 	
+  font-weight: 500; 	
+  line-height: 27px; 	
+  text-align: left; 	
+  margin-right: 48px; 	
+  opacity: 0.5; 
+}</pre></div>
+          <div class="text">".navbar_text > h3" это селектор, который выбирает все элементы &lt;h3>, являющиеся непосредственными дочерними элементами элемента с классом .navbar_text <br> "opacity: 0.5" устанавливает уровень прозрачности текста. Значение 0.5 означает, что текст будет полупрозрачным (50% прозрачности). Но так как на макете не все элементы являются полупрозрачными, нужно выделить один из них. В этом нам пожет класс ".mark", которому мы пропишем "opacity: 1"</div>
+          <div class="code mb-4"><pre>
+h3.mark { 	
+  opacity: 1; 
+}</pre></div>
+<div class="text">Селектор "h3.mark" выбирает только элементы с тегом &lt;h3>, содержащие класс "mark"</div>
+        </li>
+        <li> <strong>5. Настроим стиль для иконок в навигации </strong><br />
+          <div class="code mb-4"><pre>
+.navbar_img { 	
+  display: flex; 	
+  flex-direction: row; 	
+  flex-wrap: wrap; 	
+  margin-top: 13px; 
+}  
+.navbar_img > img { 	
+  margin-left: 51px; 
+}</pre></div>
+          <div class="text">Аналогично предыдущему пункту.</div>
+        </li>
+      </ul>
+
+    </div>
+    <!-- footer -->
+    <div class="button_row">
+      <div class="container">
+        <a href="lesson-2.html">
+          <button class="home_btn btn btn-danger mb-4">назад</button></a
+        >
+        <a href="index.html">
+          <button class="home_btn btn btn-danger mb-4">главная</button></a
+        >
+        <a href="lesson-4.html">
+          <button class="home_btn btn btn-danger mb-4">вперед</button></a
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="icons">
+          <a href="https://t.me/mementomorinnn">
+            <img src="img/telegram.png" alt="telegramm" />
+          </a>
+          <a href="https://github.com/mementomorinn">
+            <img src="img/github.png" alt="github" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

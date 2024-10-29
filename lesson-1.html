@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/lesson.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+  </head>
+  <body>
+    <div class="header mb-5">
+      <h1 class="h1">СОЗДАНИЕ САЙТОВ</h1>
+      <div class="orange"><h1 class="black">на HTML и CSS</h1></div>
+    </div>
+
+    <section class="content">
+      <div class="container">
+        <h3 class="mb-4"><strong>Урок 1. Введение в HTML</strong></h3>
+        <div class="text">
+          В прошлом уроке мы подготовили все необходимое, теперь же настало
+          время начинать верстку! Для начала разберемся с тем, как должен
+          выглядеть корневой html-документ.
+        </div>
+        <div class="links mb-5">
+          <a href="#st1">1. Структура HTML-документа</a><br /><br />
+          <a href="#st2">2. Пример базовой структуры HTML-документа</a
+          ><br /><br />
+          <a href="#st3">3. Emmet</a><br /><br />
+          <a href="#st4">4. Другие основные теги</a>
+        </div>
+        <h4 class="mb-4" id="st1"><strong>Структура HTML-документа</strong></h4>
+        <div class="text">
+          Все HTML-документы должны состоять из нескольких ключевых элементов,
+          которые обеспечивают корректное отображение и семантику страницы. К
+          таким элементам относятся:
+        </div>
+        <div class="text">
+          <strong>1. &lt;!DOCTYPE html&gt;</strong> <br />Определяет тип
+          документа и версию HTML (в данном случае это HTML5).
+        </div>
+        <div class="text">
+          <strong>2. &lt;html&gt;</strong> <br />Помогает браузерам понять, что
+          это документ HTML и как его нужно обрабатывать. Оборачивает все другие
+          элементы на странице. Включает в себя такие атрибуты как, например,
+          <strong>lang</strong>, указывающий язык страницы.
+        </div>
+        <div class="text">
+          <strong>3. &lt;head&gt;</strong> <br />Содержит метаинформацию о
+          документе. Здесь размещаются:
+          <ul>
+            <li>
+              <strong>&lt;meta&gt;</strong><br />
+              Метатеги для определения кодировки (&lt;meta charset="UTF-8"&gt;),
+              описания и ключевых слов.
+            </li>
+            <li>
+              <strong>&lt;title&gt;</strong><br />
+              Заголовок страницы, отображаемый на вкладке браузера.
+            </li>
+            <li class="mb-3">
+              <strong>&lt;link&gt;</strong><br />
+              Ссылки на внешние ресурсы, такие как CSS-файлы, шрифты и так
+              далее.
+            </li>
+          </ul>
+        </div>
+        <div class="text">
+          <strong>4. &lt;body&gt;</strong> <br />Основное содержимое страницы.
+          Здесь располагаются, например, заголовки (&lt;h1&gt;, &lt;h2&gt; и т.
+          д.), параграфы (&lt;р&gt;), списки (&lt;ul&gt;, &lt;ol&gt;,
+          &lt;li&gt;), изображения (&lt;img&gt;) и множество других тегов.
+        </div>
+        <h4 class="mt-5 mb-4" id="st2">
+          <strong>Пример базовой структуры HTML-документа:</strong>
+        </h4>
+        <div class="code mb-4">
+          <pre>
+&lt;!DOCTYPE html>
+    &lt;html lang="ru">
+        &lt;head>
+            &lt;meta charset="UTF-8">
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+            &lt;title>Моя первая HTML-страница&lt;/title>
+        &lt;/head>
+        &lt;body>
+            &lt;h1>Добро пожаловать на мою страницу!&lt;/h1>
+            &lt;p>Это мой первый документ в HTML.&lt;/p>
+        &lt;/body>
+&lt;/html></pre
+          >
+        </div>
+        <div class="text">
+          Эта страница включает заголовок, основное содержимое и текст. Теперь
+          давайте попробуем открыть ее в браузере, для этого найдите в папке
+          проекта файл index.html, щелкните правой кнопкой мыши по файлу и
+          выберите «открыть с помощью», затем выберите браузер (например, Google
+          Chrome, Firefox или любой другой). Готово, вы создали свою первую
+          HTML-страницу!
+        </div>
+        <div class="text">
+          Если вы работаете в Visual Studio Code, перед этим установив Live
+          Server, можете просто щелкнуть кнопку Go Live в нижней строке
+          состояния, чтобы включить/выключить сервер. При изменении кода
+          операцию повторять не нужно, вместо этого требуется лишь сохранить код
+          комбинацией клавишь (ctrl+S) и страница обновится автоматически.
+        </div>
+        <h4 class="mt-5 mb-4" id="st3">
+          <strong>Emmet</strong>
+        </h4>
+        <div class="text">
+          Если представленная выше конструкция кажется вам сложной для
+          запоминания, не спешите расстраиватся! В Visual Studio Code существует
+          встроенный набор плагинов (Emmet), избавляющий вас от этой
+          необходимости. Рассмотрим работу Emmet на примере создания базовой
+          структуры HTML: для этого в пустом HTML-файле введите
+          <strong>!</strong> и нажмите Tab. Это создаст основную структуру
+          HTML-документа. Существует и множество других сокращений, которы, в
+          дальнейшем, рекомендуется освоить и практиковать в использовании — это
+          сэкономит вам много времени и усилий при веб-разработке.
+        </div>
+        <h4 class="mt-5 mb-4" id="st4">
+          <strong>Другие основные теги</strong>
+        </h4>
+        <div class="text">
+          После того, как мы немного ознакомились со структурой HTML, можно
+          немного расширить свои знания о тегах. Вот список часто используемых
+          HTML-тегов с их описанием и примерами:
+          <ul class="list-unstyled">
+            <li>
+              <strong> &lt;h1> - &lt;h6></strong><br />
+              Заголовки различных уровней, где &lt;h1> — самый высокий уровень,
+              а &lt;h6> — самый низкий.
+            </li>
+            <li>
+              <strong>&lt;p></strong><br />
+              Определяет абзац текста.
+            </li>
+            <li>
+              <strong>&lt;br></strong><br />
+              Переносит текст на новую строку.
+            </li>
+            <li>
+              <strong>&lt;a></strong> <br />
+              Определяет ссылку. Атрибут href указывает на URL, на который ведет
+              ссылка.
+              <div class="code mb-4">
+                <pre>
+&lt;a href="https://example.com">Перейти на Example&lt;/a></pre
+                >
+              </div>
+            </li>
+            <li>
+              <strong>&lt;img></strong> <br />
+              Встраивает изображение. Атрибуты src и alt указывают на путь к
+              изображению и описание соответственно.
+              <div class="code mb-4">
+                <pre>&lt;img src="image.jpg" alt="Описание изображения"></pre>
+              </div>
+            </li>
+            <li>
+              <strong>&lt;button></strong> <br />
+              Определяет кнопку, которую может нажать пользователь.
+            </li>
+            <li class="mb-5">
+              <strong>&lt;section></strong> <br />
+              Определяет раздел документа, содержащий тематически связанный
+              контент.
+            </li>
+          </ul>
+        </div>
+        <div class="text">
+          Как вы уже ,возможно, заметили, В HTML существуют парные и непарные
+          теги. Парные теги, такие как &lt;p>, &lt;div> и &lt;h1>, требуют
+          открывающего и закрывающего тегов, например:
+          <div class="code mt-4 mb-4">
+            <pre>&lt;p>Содержание&lt;/p></pre>
+          </div>
+          в то время как непарные теги, такие как &lt;img> и &lt;br>, не имеют
+          закрывающего тега и записываются в одно выражение, например:
+          <div class="code mt-4 mb-4">
+            <pre>&lt;img src="image.jpg" alt="Описание изображения"></pre>
+          </div>
+        </div>
+        <div class="text mb-5">
+          Теперь вы можете попрактиковать полученные знания. Вернитесь в
+          текстовый редактор, измените текст между тегами, сами текстовые теги,
+          а также попробуйте добавить картинку и кнопку, сохраните файл и
+          обновите страницу в браузере, чтобы увидеть изменения. Это отличный
+          способ закрепить основные знания!
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <div class="button_row">
+      <div class="container">
+        <a href="lesson-0.html">
+          <button class="home_btn btn btn-danger mb-4">назад</button></a
+        >
+        <a href="index.html">
+          <button class="home_btn btn btn-danger mb-4">главная</button></a
+        >
+        <a href="lesson-2.html">
+          <button class="home_btn btn btn-danger mb-4">вперед</button></a
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="icons">
+          <a href="https://t.me/mementomorinnn">
+            <img src="img/telegram.png" alt="telegramm" />
+          </a>
+          <a href="https://github.com/mementomorinn">
+            <img src="img/github.png" alt="github" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

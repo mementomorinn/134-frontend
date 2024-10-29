@@ -1,7 +1,14 @@
+:root {
+  --color-bg: #e9d8d8;
+  --color-red: #181818;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+strong{
+  color: var(--color-red);
 }
 /* .home {
   margin-bottom: 30px;
@@ -24,13 +31,15 @@
   margin-bottom: 30px;
   font-size: 20px;
 }
-.code_container {
-  background: #e9d8d8;
-  padding: 15px 20px 20px 20px;
-  border-radius: 10px;
-}
 .code {
-  color: rgba(82, 52, 63, 0.7);
+  background: var(--color-bg);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left;
+}
+pre {
+  color: var(--color-red);
+  opacity: 0.75;
   font-size: 17px;
 }
 .lesson_title {
@@ -46,4 +55,44 @@ li {
 .title_li {
   font-weight: bold;
   margin-bottom: 10px;
+}
+.home_btn {
+  font-weight: bold;
+  width: 90px;
+}
+div > .links {
+  display: inline-block;
+  padding: 15px 20px 30px 15px;
+  background: var(--color-bg);
+  /* max-width: 300px; */
+  border-radius: 10px;
+}
+.links {
+  font-size: 17px;
+}
+.links > a {
+  text-decoration: underline #866c76;
+  color: rgb(151, 111, 128);
+}
+.links > a:hover {
+  text-decoration: none;
+  color: var(--color-red);
+  font-family: inherit;
+}
+li > strong {
+  color: var(--color-red);
+  opacity: 0.75;
+}
+.text > strong {
+  color: var(--color-red);
+  opacity: 0.75;
+}
+.image {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  
+}
+.image > p{
+  opacity: 0.6;
+  color: var(--color-red);
 }

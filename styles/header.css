@@ -1,24 +1,26 @@
 body {
-  background: #cab4bb;
+  background: #d3babd;
 }
 
 .header {
-  min-height: 200px;
+  min-height: 190px;
   background: #181818;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
+  flex-direction: column;
   padding: 20px 0 40px 0;
-  margin-bottom: 50px;
+  text-align: center;
 }
 .h1 {
   font-weight: bold;
   color: #d3d3d3;
+  text-align: center;
 }
 .orange {
   padding: 0 15px;
-  background: #f7577f;
+  background: #dc3545;
   border-radius: 5px;
   text-align: center;
   margin-left: 10px;
@@ -42,4 +44,16 @@ body {
 .footer img {
   width: 40px;
   margin-right: 10px;
+}
+.button_row {
+  width: 100%;
+  background: #272727;
+  height: 50px;
+  padding: 5px;
+}
+
+.button_row > .container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }

@@ -15,18 +15,21 @@
   </head>
   <body>
     <!-- header -->
-    <div class="header">
-      <h1 class="h1">ВЕРСТКА САЙТОВ</h1>
-      <div class="orange"><h1 class="black">С НУЛЯ</h1></div>
+    <div class="header mb-5">
+      <h1 class="h1">СОЗДАНИЕ САЙТОВ</h1>
+      <div class="orange"><h1 class="black">на HTML и CSS</h1></div>
     </div>
+
     <!-- content -->
     <section class="content">
       <div class="container">
-        <a href="index.html">
-          <button class="home_btn btn btn-danger mb-4">на главную</button></a
-        >
-        <h3 class="mb-5"><strong>Подготовка к в верстке</strong></h3>
-        <h4 class="mb-4"><strong>Выбор редактора кода</strong></h4>
+        <h3 class="mb-4"><strong>Урок 0. Подготовка к верстке</strong></h3>
+        <div class="links mb-4">
+          <a href="#st1">1. Выбор редактора кода</a><br /><br />
+          <a href="#st2">2. Установка плагинов</a><br /><br />
+          <a href="#st3">3. Структура проекта</a>
+        </div>
+        <h4 class="mb-4" id="st1"><strong>Выбор редактора кода</strong></h4>
         <div class="text">
           Первым шагом в создании нашего сайта является выбор и настройка
           редактора кода. На данный момент их существует огромное множество и
@@ -76,7 +79,7 @@
             >ссылке</a
           >.
         </div>
-        <h4 class="mb-4"><strong>Установка плагинов</strong></h4>
+        <h4 class="mb-4" id="st2"><strong>Установка плагинов</strong></h4>
         <div class="text">
           Итак, после успешной установки Visual Studio Code открываем его и
           заходим во вкладку Extensions (магазин расширений). С помощью поиска
@@ -91,8 +94,8 @@
           </li>
           <li>
             <strong>2. Live Server</strong><br />
-            Позволит запускать код в браузере и обновлять изменения после
-            нажатия комбинации клавиш ctrl+S.
+            Позволяет создать локальный сервер разработки с функцией
+            динамической перезагрузки для статических и динамических страниц.
           </li>
           <li>
             <strong>3. VS HTML to CSS</strong><br />
@@ -110,7 +113,7 @@
             файлов и каталогов проекта.
           </li>
         </ul>
-        <h4 class="mb-4"><strong>Файлы проекта</strong></h4>
+        <h4 class="mb-4" id="st3"><strong>Структура проекта</strong></h4>
         <div class="text">
           Для верстки сайтов необходимо создать структуру файлов и каталогов,
           которая обеспечит удобное управление проектом. Основные файлы и
@@ -138,12 +141,15 @@
           </li>
         </ul>
         <div class="text">Пример структуры каталога:</div>
-        <div class="code_container mb-5">
-          <code class="code">
-            my-first-project <br />
-            ├──index.html<br />
-            ├──css/<br />│ └── styles.css<br />├── images/ <br />└── fonts/
-          </code>
+        <div class="code mb-5">
+          <pre>
+my-first-project
+├──index.html
+├──css/
+│  └── styles.css
+├── images/
+└── fonts/</pre
+          >
         </div>
         <div class="text">
           В более сложных проектах можно встретить и другие файлы, например,
@@ -177,6 +183,17 @@
       </div>
     </section> -->
     <!-- footer -->
+    <div class="button_row">
+      <div class="container">
+        <button class="home_btn btn btn-danger mb-4" disabled>назад</button>
+        <a href="index.html">
+          <button class="home_btn btn btn-danger mb-4">главная</button></a
+        >
+        <a href="lesson-1.html">
+          <button class="home_btn btn btn-danger mb-4">вперед</button></a
+        >
+      </div>
+    </div>
     <div class="footer">
       <div class="container">
         <div class="icons">

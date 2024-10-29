@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/lesson.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header mb-5">
+      <h1 class="h1">СОЗДАНИЕ САЙТОВ</h1>
+      <div class="orange"><h1 class="black">на HTML и CSS</h1></div>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+      <h3 class="mb-4"><strong>Урок 2. Немного про CSS</strong></h3>
+      <div class="links mb-5">
+        <a href="#st1">1. Что такое CSS</a><br /><br />
+        <a href="#st2">2. Подключение CSS к HTML-странице</a><br /><br />
+        <a href="#st3">3. Классы в CSS</a><br /><br />
+        <a href="#st4">4. Другие основные теги</a>
+      </div>
+      <h4 class="mb-4" id="st1"><strong>Что такое CSS</strong></h4>
+      <div class="text">
+        CSS (Cascading Style Sheets) — это язык стилей, предназначенный для
+        описания внешнего вида документа, созданного на языке разметки (чаще
+        всего HTML). CSS управляет визуальным оформлением элементов на
+        веб-странице. К его основным функциям относятся:
+      </div>
+      <ul class="list-unstyled mb-5">
+        <li>
+          <strong>1. Стилизация</strong><br />
+          Определяет, как элементы будут выглядеть (цвета, шрифты, размеры и
+          пр.).
+        </li>
+        <li>
+          <strong>2. Верстка</strong><br />
+          Позволяет организовывать элементы на странице (положение и размер).
+        </li>
+        <li>
+          <strong>3. Адаптивность</strong><br />
+          Упрощает создание страниц, которые хорошо отображаются на разных
+          устройствах (мобильные, планшеты, ПК).
+        </li>
+        <li>
+          <strong>4. Производительность</strong> <br />
+          Снижение веса HTML-файлов, с помощью вынесения стилей в отдельные
+          CSS-файлы.
+        </li>
+      </ul>
+      <h4 class="mb-4" id="st2">
+        <strong>Подключение CSS к HTML-странице</strong>
+      </h4>
+      <div class="text">
+        Вы можете подключить CSS к HTML несколькими способами. Рассмотрим два
+        наиболее распространенных:
+      </div>
+      <div class="text">
+        <strong>1. Встроенные стили </strong> <br />Вы можете добавить стили
+        непосредственно в HTML-элементы с помощью атрибута style:
+      </div>
+      <div class="code mb-4">
+        <pre>&lt;p style="color: red;">Это красный текст.&lt;/p></pre>
+      </div>
+      <div class="text">
+        В данном случае, свойство color устанавливает цвет текста. Значение red
+        (красный) определяет, что текст внутри этого параграфа будет
+        отображаться красным цветом.
+      </div>
+      <div class="text">
+        <strong>2. Внутренние стили</strong> <br />Стили можно добавить внутри
+        тега &lt;style> в секции &lt;head> HTML-документа.
+      </div>
+      <div class="code mb-4">
+        <pre>
+ &lt;head>
+  &lt;meta charset="UTF-8" />
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  &lt;title>Document&lt;/title>
+  &lt;style>
+    p {
+      color: red;
+    }
+  &lt;/style>
+&lt;/head></pre
+        >
+      </div>
+      <div class="text">
+        <strong>3. Внешние стили</strong><br />Предыдущие способы могут
+        использоваться в маленьких проектах с небольшим количеством стилей, но
+        что же делать, если ваши стили занимают сто, тысячу и более строк? Для
+        таких случаев существует наиболее удобный и распространенный метод: вы
+        создаете отдельный файл CSS и подключаете его к HTML-документу с помощью
+        тега &lt;link>. Для этого вам нужно добавить стили в файл CSS (в нашем
+        случае файл style.css, расположенный в каталоге CSS), например:
+      </div>
+      <div class="code mb-4">
+        <pre>
+p {
+  color: red;
+}</pre
+        >
+      </div>
+      <div class="text">
+        Обратите внимание: каждое правило CSS состоит из свойства и значения,
+        разделенных двоеточием, и заканчивается точкой с запятой. Для
+        группировки стилей, которые относятся к одному селектору используются
+        фигурные скобки. Все правила, описанные между фигурными скобками, будут
+        применяться к элементам, соответствующим этому селектору.
+      </div>
+      <div class="text">
+        Далее подключите CSS к HTML, прописав в секции &lt;head> файлa
+        index.html следующий код:
+      </div>
+      <div class="code mb-4">
+        <pre>&lt;link rel="stylesheet" href="css/styles.css"></pre>
+      </div>
+      <div class="text">
+        Теперь ваша страница будет использовать стили из файла styles.css, что
+        упростит управление оформлением и выполнит разделение HTML-кода и
+        CSS-стилей.
+      </div>
+      <h4 class="mb-4" id="st3"><strong>Классы в CSS</strong></h4>
+      <div class="text">
+        Класс — это атрибут, который можно добавить к HTML-элементу для
+        предоставления ему определенного стиля. Каждый класс начинается с точки
+        (.), после которой идет имя класса. Например, если вы создадите класс с
+        именем highlight, вы будете использовать его в CSS следующим образом:
+      </div>
+      <div class="code mb-4">
+        <pre>
+.highlight {
+  color: red;
+}</pre
+        >
+      </div>
+      <div class="text">
+        Классы позволяют группировать элементы и применять к ним одинаковые
+        стили без необходимости дублирования кода. Чтобы применить класс к
+        элементу в HTML, нужно использовать атрибут class. Пример применения
+        класса highlight к элементу &lt;p>выглядит следующим образом:
+      </div>
+      <div class="code mb-4">
+        <pre>&lt;p class="highlight">Это красный текст.&lt;/p></pre>
+      </div>
+      <div class="text">
+        Использование классов способно дать вам много преимуществ, например:
+        <ul class="list-unstyled mb-5">
+          <li>
+            <strong>1. Повторное использование</strong><br />
+            Один и тот же класс можно применять к многим элементам, что упрощает
+            стилизацию и делает код более лаконичным.
+          </li>
+          <li>
+            <strong>2. Упрощенное управление</strong><br />
+            Если вы хотите изменить стиль, вам просто нужно изменить его в одном
+            месте (в файле CSS) вместо того, чтобы менять его в каждом элементе.
+          </li>
+          <li>
+            <strong>3. Комбинирование стилей</strong><br />
+            Можно комбинировать несколько классов на одном элементе, чтобы
+            создать уникальный стиль.
+          </li>
+          <li>
+            <strong>4. Чистота кода</strong> <br />
+            Использование классов помогает поддерживать код более организованным
+            и легко читаемым.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="button_row">
+      <div class="container">
+        <a href="lesson-1.html">
+          <button class="home_btn btn btn-danger mb-4">назад</button></a
+        >
+        <a href="index.html">
+          <button class="home_btn btn btn-danger mb-4">главная</button></a
+        >
+        <a href="lesson-3.html">
+          <button class="home_btn btn btn-danger mb-4">вперед</button></a
+        >
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="icons">
+          <a href="https://t.me/mementomorinnn">
+            <img src="img/telegram.png" alt="telegramm" />
+          </a>
+          <a href="https://github.com/mementomorinn">
+            <img src="img/github.png" alt="github" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
